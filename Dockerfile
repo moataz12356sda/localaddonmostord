@@ -3,11 +3,10 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-# Install Python3 and pip
-RUN apk add --no-cache python3 py3-pip \
- && pip3 install paho-mqtt influxdb
+RUN apk add --no-cache python3 py3-pip
 
-# Copy files
+RUN pip3 install --break-system-packages paho-mqtt influxdb
+
 COPY run.sh /
 COPY main.py /
 RUN chmod a+x /run.sh
