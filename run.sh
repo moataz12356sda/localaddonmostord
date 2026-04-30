@@ -1,2 +1,4 @@
 #!/usr/bin/with-contenv bashio
-echo Hello world!
+
+echo "Starting mostorod2 add-on..."
+python3 /main.py
