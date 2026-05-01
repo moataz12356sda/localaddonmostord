@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
 
 echo "Starting mostorodaddon..."
-python3 /main.py
+
+exec python3 -u /main.py
